@@ -1,21 +1,28 @@
-import {  BookOpenCheck,CirclePlus,LayoutDashboardIcon } from 'lucide-react';
+import {CirclePlus, } from 'lucide-react';
 import { MdHealthAndSafety } from "react-icons/md";
 import { CgProfile } from 'react-icons/cg';
 import { IoListCircleOutline } from "react-icons/io5";
-
 import { Link } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
+import { GoReport } from 'react-icons/go';
 ;
 
 
 
 const DashboardSidebar = () => {
-    // const {user}=useAuthContext();
+
     const menus = [
-        {to:"/dashboard",icon:LayoutDashboardIcon,label:"Report"},
-        {to:"/dashboard/course",icon:BookOpenCheck,label:"Course"},
+        {to:"/dashboard",icon:GoReport,label:"Report"},
         {to:"/dashboard/doctor",icon:IoListCircleOutline,label:"Doctor List"},
+        {to:"/dashboard/patient",icon:IoListCircleOutline,label:"Patient List"},
+        {to:"/dashboard/appointment",icon:IoListCircleOutline,label:"Appointment List"},
+        {to:"/dashboard/doctor",icon:IoListCircleOutline,label:"Treatment List"},
         {to:"/dashboard/add/doctor",icon:CirclePlus,label:"Add Doctor"},
+        {to:"/dashboard/add/patient",icon:CirclePlus,label:"Add Patient"},
+        {to:"/dashboard/add/doctor",icon:CirclePlus,label:"Booking Appointment"},
+        {to:"/dashboard/add/doctor",icon:CirclePlus,label:"Treament Plan"},
         {to:"/dashboard/profile",icon:CgProfile,label:"Profile"},
+        {to:"",icon:FiLogOut,label:"Log Out"},
        
     ]
     
